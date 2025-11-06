@@ -1,54 +1,208 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f7f7f7;
-  margin: 0;
-  padding: 0;
-  color: #333;
+/* ===== Base Styles ===== */
+* {
+  box-sizing: border-box;
 }
 
-header {
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  background-color: #000000;
+  line-height: 1.6;
+}
+
+/* the main "sfu course planner" section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: #6f6d6d; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #561b1b;
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* meet the team section */
+.team-simple {
+  background: #561b1b;
+  text-align: center;
+  padding: 6rem 2rem 7rem;
+}
+
+.team-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  color: #c8c2c2;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.member {
+  flex: 1 1 200px;
+  max-width: 800px;
+}
+
+.member h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+  font-size: 1.7rem;
+  color: #c8c2c2;
+  margin-bottom: 0.3rem;
+}
+
+.member p {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #000000;
+  margin: 0;
+}
+
+/* video sections */
+.video-section.dark {
+  background: #000;
+  color: #fff;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.video-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+/* thumbnail */
+.youtube-player {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.08);
+  background: #000;
+}
+
+.youtube-player img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.youtube-player:hover img {
+  transform: scale(1.03);
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: rgba(128, 0, 0, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.play-btn::before {
+  content: "";
+  border-style: solid;
+  border-width: 14px 0 14px 22px;
+  border-color: transparent transparent transparent #fff;
+  margin-left: 6px;
+}
+
+.youtube-player:hover .play-btn {
+  background: rgba(160, 0, 0, 1);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.youtube-player iframe {
+  width: 100%;
+  height: 480px;
+  border: none;
+  display: block;
+}
+
+/* button background */
+.buttons-only {
+  background: #6f6d6d;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.btn-angular {
   background: #800000;
   color: white;
-  padding: 1rem;
-  text-align: center;
+  padding: 0.9rem 2.2rem;
+  border-radius: 4px; /* angular style */
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 rgba(128, 0, 0, 0);
 }
 
-main {
-  max-width: 900px;
-  margin: 2rem auto;
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+.btn-angular:hover {
+  background: #a00000;
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(128, 0, 0, 0.5);
 }
 
-h1, h2 {
-  color: #800000;
-}
-
-section {
-  margin-bottom: 2rem;
-}
-
-ul {
-  list-style-type: square;
-  padding-left: 1.5rem;
-}
-
-a {
-  color: #0066cc;
-}
-
-.screenshot {
-  width: 100%;
-  border-radius: 8px;
-  margin: 1rem 0;
-}
-
+/* ===== Footer ===== */
 footer {
+  background: #e6e6e6;
+  color: #555;
   text-align: center;
-  color: #666;
-  padding: 1rem;
-  border-top: 1px solid #ddd;
+  padding: 1.5rem;
   font-size: 0.9rem;
 }
+
