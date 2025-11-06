@@ -1,4 +1,4 @@
-# [SFU Course Planner Webpage ]([https://example.com](https://rhs8.github.io/SFU-Course-Planner-Web/))
+# [SFU Course Planner](https://rhs8.github.io/SFU-Course-Planner-Web/)
 
 SFU Course Planner is a mobile app designed to help students efficiently plan and track their academic progress. It centralizes course information, requirements, and scheduling into one cohesive platform, reducing dependence on external resources and manual tracking.
 
