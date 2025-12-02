@@ -4,119 +4,216 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SFU Course Planner – CMPT 362 Project</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- FONTS -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet" />
+
+  <!-- INLINE CSS -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: white;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    .team-simple {
+      padding: 60px 20px;
+      background: #0a0a0a;
+      text-align: center;
+    }
+
+    .team-grid {
+      display: grid;
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .member {
+      background: #111;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .video-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .youtube-player {
+      max-width: 600px;
+      margin: 20px auto;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .youtube-player img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .play-btn {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      background: rgba(255,255,255,0.9);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .play-btn:after {
+      content: "";
+      border-style: solid;
+      border-width: 15px 0 15px 25px;
+      border-color: transparent transparent transparent black;
+      position: absolute;
+      left: 28px;
+      top: 20px;
+    }
+
+    .buttons-only {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .btn-angular {
+      border: 2px solid white;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .btn-angular:hover {
+      background: white;
+      color: black;
+    }
+
+    footer {
+      padding: 20px;
+      background: #111;
+      text-align: center;
+      font-size: 13px;
+    }
+  </style>
 </head>
 
 <body>
 
-  <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>SFU Course Planner</h1>
-      <p>that actually works.</p>
-    </div>
-  </section>
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>SFU Course Planner</h1>
+    <p>that actually works.</p>
+  </div>
+</section>
 
-  <section class="team-simple">
-    <h2 class="team-title">Meet the Team</h2>
-    <div class="team-grid">
+<section class="team-simple">
+  <h2>Meet the Team</h2>
+  <div class="team-grid">
+    <div class="member"><h3>Angela Liong</h3><p>Course Tree visualization</p></div>
+    <div class="member"><h3>Darine Abdelmotalib</h3><p>API Integration</p></div>
+    <div class="member"><h3>Cas Sugihwo</h3><p>Figma UI</p></div>
+    <div class="member"><h3>Elaiza Chavez</h3><p>Profile UI + Progress Bar</p></div>
+    <div class="member"><h3>Rana Hoshyarsadeghi</h3><p>Presentations + Website</p></div>
+  </div>
+</section>
 
-      <div class="member">
-        <h3>Angela Liong</h3>
-        <p>Course Tree visualization Connecting All Related Courses</p>
-        <p>Approx. 3 × MyRuns3</p>
-      </div>
+<section class="video-section">
+  <h2>Project Pitch</h2>
+  <div class="youtube-player" data-id="3N_ZVqR0Hlk"></div>
+</section>
 
-      <div class="member">
-        <h3>Darine Abdelmotalib</h3>
-        <p>CourSys API Integration (DB logic + backend)</p>
-        <p>Program Requirements + Course Info</p>
-        <p>Approx. 2.5 × MyRuns3</p>
-      </div>
+<section class="video-section">
+  <h2>Show and Tell 1</h2>
+  <div class="youtube-player" data-id="vv6RmjH88Io"></div>
+</section>
 
-      <div class="member">
-        <h3>Cas Sugihwo</h3>
-        <p>Designed Figma UI for Implementation + Semester Course Planner</p>
-        <p>Approx. 2 × MyRuns3</p>
-      </div>
+<section class="video-section">
+  <h2>Show and Tell 2</h2>
+  <div class="youtube-player" data-id="c23GNekp7q8"></div>
+</section>
 
-      <div class="member">
-        <h3>Elaiza Chavez</h3>
-        <p>Profile fragment (UI + logic) + Degree Progress Bar + Course Maze Visualization</p>
-        <p>Approx. 2.5 × MyRuns3</p>
-      </div>
+<section class="video-section">
+  <h2>Final Project</h2>
+  <div class="youtube-player" data-id="xYUQmip61Ns"></div>
+</section>
 
-      <div class="member">
-        <h3>Rana Hoshyarsadeghi</h3>
-        <p>Presentations + Semester Course Planning + Project Webpage</p>
-        <p>Approx. 2 × MyRuns3</p>
-      </div>
+<section class="buttons-only">
+  <div class="links">
+    <a href="https://github.com/rhs8/SFU-Course-Planner-Web/raw/main/SFU-Course-Planner.apk" class="btn-angular">APK</a>
+    <a href="https://github.com/darineabdelmotalib/cmpt362_GroupProject" class="btn-angular">GitHub Repo</a>
+    <a href="https://www.figma.com/design/DB3LutnsN0rObxgxDPJmOw/cmpt362-mock?node-id=0-1&p=f" class="btn-angular">Figma</a>
+    <a href="diagram1.png" download class="btn-angular">Threaded Design Diagram 1</a>
+    <a href="diagram2.png" download class="btn-angular">Threaded Design Diagram 2</a>
+  </div>
+</section>
 
-    </div>
-  </section>
+<footer>
+  <p>© 2025 CMPT 362 Group 16 | Simon Fraser University</p>
+</footer>
 
-  <section class="video-section dark" id="pitch">
-    <h2 class="video-title">Project Pitch</h2>
-    <div class="youtube-player" data-id="3N_ZVqR0Hlk"></div>
-  </section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const players = document.querySelectorAll(".youtube-player");
+    players.forEach(player => {
+      const id = player.dataset.id.trim();
+      const img = document.createElement("img");
+      img.src = `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
+      img.loading = "lazy";
 
-  <section class="video-section dark" id="show-and-tell-1">
-    <h2 class="video-title">Show and Tell 1</h2>
-    <div class="youtube-player" data-id="vv6RmjH88Io"></div>
-  </section>
+      const play = document.createElement("div");
+      play.className = "play-btn";
 
-  <section class="video-section dark" id="show-and-tell-2">
-    <h2 class="video-title">Show and Tell 2</h2>
-    <div class="youtube-player" data-id="c23GNekp7q8"></div>
-  </section>
+      player.appendChild(img);
+      player.appendChild(play);
 
-  <section class="video-section dark" id="Final Project">
-    <h2 class="video-title">Final Project</h2>
-    <div class="youtube-player" data-id="xYUQmip61Ns"></div>
-  </section>
-
-  <section class="buttons-only">
-    <div class="links">
-      <a href="https://github.com/rhs8/SFU-Course-Planner-Web/raw/main/SFU-Course-Planner.apk" class="btn-angular" target="_blank">APK</a>
-      <a href="https://github.com/darineabdelmotalib/cmpt362_GroupProject" class="btn-angular" target="_blank">GitHub Repo</a>
-      <a href="https://www.figma.com/design/DB3LutnsN0rObxgxDPJmOw/cmpt362-mock?node-id=0-1&p=f" class="btn-angular" target="_blank">Figma</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 CMPT 362 Group 16 | Simon Fraser University</p>
-  </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const players = document.querySelectorAll(".youtube-player");
-      players.forEach(player => {
-        const id = player.dataset.id.trim();  // Safety trim
-        const thumbnail = document.createElement("img");
-        thumbnail.src = `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
-        thumbnail.alt = "Video thumbnail";
-        thumbnail.loading = "lazy";
-
-        const playBtn = document.createElement("div");
-        playBtn.classList.add("play-btn");
-
-        player.appendChild(thumbnail);
-        player.appendChild(playBtn);
-
-        player.addEventListener("click", function () {
-          const iframe = document.createElement("iframe");
-          iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
-          iframe.frameBorder = "0";
-          iframe.allow =
-            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-          iframe.allowFullscreen = true;
-          player.innerHTML = "";
-          player.appendChild(iframe);
-        });
-      });
+      player.onclick = () => {
+        player.innerHTML = `<iframe width="100%" height="315"
+          src="https://www.youtube.com/embed/${id}?autoplay=1"
+          frameborder="0"
+          allowfullscreen></iframe>`;
+      };
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
