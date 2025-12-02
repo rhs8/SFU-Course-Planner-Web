@@ -18,60 +18,67 @@
     </div>
   </section>
 
- <section class="team-simple">
-  <h2 class="team-title">Meet the Team</h2>
-  <div class="team-grid">
+  <section class="team-simple">
+    <h2 class="team-title">Meet the Team</h2>
+    <div class="team-grid">
 
-    <div class="member">
-      <h3>Angela Liong</h3>
-      <p>Course Tree visualization that connects all related courses</p>
+      <div class="member">
+        <h3>Angela Liong</h3>
+        <p>Course Tree visualization Connecting All Related Courses</p>
+        <p>Approx. 3 × MyRuns3</p>
+      </div>
+
+      <div class="member">
+        <h3>Darine Abdelmotalib</h3>
+        <p>CourSys API Integration (DB logic + backend)</p>
+        <p>Program Requirements + Course Info</p>
+        <p>Approx. 2.5 × MyRuns3</p>
+      </div>
+
+      <div class="member">
+        <h3>Cas Sugihwo</h3>
+        <p>Designed Figma UI for Implementation + Semester Course Planner</p>
+        <p>Approx. 2 × MyRuns3</p>
+      </div>
+
+      <div class="member">
+        <h3>Elaiza Chavez</h3>
+        <p>Profile fragment (UI + logic) + Degree Progress Bar + Course Maze Visualization</p>
+        <p>Approx. 2.5 × MyRuns3</p>
+      </div>
+
+      <div class="member">
+        <h3>Rana Hoshyarsadeghi</h3>
+        <p>Presentations + Semester Course Planning + Project Webpage</p>
+        <p>Approx. 2 × MyRuns3</p>
+      </div>
+
     </div>
-
-    <div class="member">
-      <h3>Darine Abdelmotalib</h3>
-      <p>Program Requirements page with permanent checkmark logic and shared database connection</p>
-    </div>
-
-    <div class="member">
-      <h3>Cas Sugihwo</h3>
-      <p>App structure and navigation connecting all pages</p>
-    </div>
-
-
-
-    <div class="member">
-      <h3>Elaiza Chavez</h3>
-      <p>Profile page progress bar that updates automatically based on checkmarks</p>
-    </div>
-
-    <div class="member">
-      <h3>Rana Hoshyarsadeghi</h3>
-      <p>Presentation, website updates, and planning upcoming final-version features</p>
-    </div>
-
-  </div>
-</section>
-
+  </section>
 
   <section class="video-section dark" id="pitch">
     <h2 class="video-title">Project Pitch</h2>
     <div class="youtube-player" data-id="3N_ZVqR0Hlk"></div>
   </section>
 
-  <section class="video-section dark" id="show-and-tell">
+  <section class="video-section dark" id="show-and-tell-1">
     <h2 class="video-title">Show and Tell 1</h2>
     <div class="youtube-player" data-id="vv6RmjH88Io"></div>
   </section>
 
-  <section class="video-section dark" id="show-and-tell">
+  <section class="video-section dark" id="show-and-tell-2">
     <h2 class="video-title">Show and Tell 2</h2>
-    <div class="youtube-player" data-id="c23GNekp7q8
-"></div>
+    <div class="youtube-player" data-id="c23GNekp7q8"></div>
+  </section>
+
+  <section class="video-section dark" id="Final Project">
+    <h2 class="video-title">Final Project</h2>
+    <div class="youtube-player" data-id="xYUQmip61Ns"></div>
   </section>
 
   <section class="buttons-only">
     <div class="links">
-      <a href="https://github.com/rhs8/SFU-Course-Planner-Web/raw/main/SFU-Course-Planner.apk" class="btn-angular" target="_blank">APK</a> 
+      <a href="https://github.com/rhs8/SFU-Course-Planner-Web/raw/main/SFU-Course-Planner.apk" class="btn-angular" target="_blank">APK</a>
       <a href="https://github.com/darineabdelmotalib/cmpt362_GroupProject" class="btn-angular" target="_blank">GitHub Repo</a>
       <a href="https://www.figma.com/design/DB3LutnsN0rObxgxDPJmOw/cmpt362-mock?node-id=0-1&p=f" class="btn-angular" target="_blank">Figma</a>
     </div>
@@ -81,12 +88,11 @@
     <p>© 2025 CMPT 362 Group 16 | Simon Fraser University</p>
   </footer>
 
-
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const players = document.querySelectorAll(".youtube-player");
       players.forEach(player => {
-        const id = player.dataset.id;
+        const id = player.dataset.id.trim();  // Safety trim
         const thumbnail = document.createElement("img");
         thumbnail.src = `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
         thumbnail.alt = "Video thumbnail";
@@ -114,3 +120,4 @@
 
 </body>
 </html>
+
